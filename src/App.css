@@ -32,7 +32,17 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.line {
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  width: 150px;
+  height: 450px;
+  border: 5px solid red;
 }
