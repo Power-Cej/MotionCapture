@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+<img width=100% title="README" alt="README" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=MOTION%20CAPTURE&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GET STARTED
 
-## Available Scripts
+## REQUIREMENTS
 
-In the project directory, you can run:
+Download and install the following:
 
-### `npm start`
+1. [Microsoft Visual Code Studio][1] (free editor)
+2. [NodeJS][2] (package manager)
+3. [Python 3.10.6][3]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## SETUP
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone and Navigate to this repository
 
-### `npm test`
+Copy and paste this to your preferred terminal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/noname08-droid/MotionCapture
+cd .\MotionCapture\
+```
 
-### `npm run build`
+### 2. Open it in your Microsoft Visual Code Studio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Copy and paste this to your preferred terminal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+code .
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Install dependencies for web app (React JS)
 
-### `npm run eject`
+Copy and paste this to your preferred terminal.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Run web app server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Copy and paste this to your preferred terminal.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm run start
+```
 
-## Learn More
+### 5. Install dependencies for body mearsurement (Flask)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copy and paste this to your preferred terminal.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+cd .\motion_capture_server\
+python -m venv venv
+pip install -r requirements.txt
+```
 
-### Code Splitting
+### 6. Run body measurement server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Copy and paste this to your preferred terminal.
 
-### Analyzing the Bundle Size
+```
+python server.py
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="100%" title="README" alt="README" src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=170&amp;section=footer&amp;fontSize=42&amp;fontColor=fff&amp;animation=twinkling" style="max-width: 100%;">
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[1]: https://code.visualstudio.com/download/
+[2]: https://nodejs.org/en/
+[3]: https://www.python.org/downloads/release/python-3106/
