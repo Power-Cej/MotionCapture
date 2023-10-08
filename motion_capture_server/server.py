@@ -11,15 +11,14 @@ CORS(app)
 def myServer():
     data = request.get_json()
     image_data = data.get('imageData')
-
     # Decode base64 data to bytes
     image_bytes = base64.b64decode(image_data.split(',')[1])
 
     # Save the bytes to a file
-    with open('testing.png', 'wb') as f:
+    with open('reference/result.png', 'wb') as f:
         f.write(image_bytes)
 
-    result = motionCapture.capture_motion('testing.png')
+    result = motionCapture.capture_motion('reference/result.png')
     return jsonify(result)
 
 

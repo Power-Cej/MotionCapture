@@ -1,6 +1,5 @@
 import cv2
 import mediapipe as mp
-import time
 
 
 def capture_motion(result):
@@ -46,7 +45,6 @@ def capture_motion(result):
             right_shoulder = results.pose_landmarks.landmark[mp_holistic.PoseLandmark.RIGHT_SHOULDER]
 
             # identify hips landmarks
-            left_hip = results.pose_landmarks.landmark[mp_holistic.PoseLandmark.LEFT_HIP]
             right_hip = results.pose_landmarks.landmark[mp_holistic.PoseLandmark.RIGHT_HIP]
 
             # identify right ankle ladmarks
@@ -67,23 +65,23 @@ def capture_motion(result):
                                  right_ankle.y * image_height)
             leg_length_cm = abs(leg_length_pixels) / pixels_per_cm
 
+            # display measurements
+            print(f'Shoulder Width (cm):---------- {shoulder_width_cm:.2f}')
+            print(f'Top Length (cm): {top_length_cm:.2f}')
+            print(f'Leg Length (cm): {leg_length_cm:.2f}')
+
             shoulder_result = int(shoulder_width_cm)
             shirt_result = int(top_length_cm)
             leg_result = int(leg_length_cm)
 
-            # # display measurements
-            print(f'Shoulder Width (cm):---------- {shoulder_width_cm:.2f}')
-            print(f'Top Length (cm): {top_length_cm:.2f}')
-            print(f'Leg Length (cm): {leg_length_cm:.2f}')
+            # save holistic image
+            cv2.imwrite('reference/holistic.png', frame)
+
             return {
                 'shoulder_width_cm': shoulder_result,
                 'top_length_cm': shirt_result,
                 'leg_length_cm': leg_result
             }
-
-        # Display the frame with annotations
-        # cv2.imshow('MediaPipe Holistic', frame)
-        cv2.waitKey(0)
 
     # Close the window after key press
     cv2.destroyAllWindows()
